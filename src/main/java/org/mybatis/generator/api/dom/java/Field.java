@@ -23,6 +23,7 @@ public class Field extends JavaElement {
     private String initializationString;
     private boolean isTransient;
     private boolean isVolatile;
+    private String remarks;
 
     public Field() {
         // use a default name to avoid NPE
@@ -66,6 +67,14 @@ public class Field extends JavaElement {
         this.initializationString = initializationString;
     }
 
+    public String getRemarks() {
+        return remarks;
+    }
+
+    public void setRemarks(String remarks) {
+        this.remarks = remarks;
+    }
+
     public String getFormattedContent(int indentLevel, CompilationUnit compilationUnit) {
         StringBuilder sb = new StringBuilder();
 
@@ -102,6 +111,9 @@ public class Field extends JavaElement {
         }
 
         sb.append(';');
+        if (remarks!=null&&remarks.length()>0){
+            sb.append("//").append(remarks);
+        }
 
         return sb.toString();
     }
