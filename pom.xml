@@ -11,7 +11,7 @@
 
     <groupId>io.github.jankenliu</groupId>
     <artifactId>mybatis-generator-core-ex</artifactId>
-    <version>1.3.7-SNAPSHOT</version>
+    <version>1.3.7-RELEASE</version>
     <packaging>jar</packaging>
     <name>MyBatis Generator Core Extends For lyy </name>
 
